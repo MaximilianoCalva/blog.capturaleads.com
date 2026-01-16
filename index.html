@@ -1,0 +1,161 @@
+<!-- BLOG HERO & GRID SNIPPET -->
+<style>
+    /* --- BLOG LAYOUT STYLES --- */
+    .blog-container-wrapper {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #05081a;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .blog-hero {
+        text-align: center;
+        padding: 80px 20px 60px;
+        background: radial-gradient(circle at center, rgba(41, 102, 255, 0.1) 0%, transparent 70%);
+    }
+
+    .blog-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .blog-hero p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .blog-grid-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+    }
+
+    .blog-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(41, 102, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .blog-thumb {
+        width: 100%;
+        height: 200px;
+        background: #1a1f35;
+        /* Placeholder color if no image */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+    }
+
+    .blog-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        background: rgba(41, 102, 255, 0.1);
+        color: #2966ff;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    .blog-title {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        color: white;
+        font-weight: 700;
+    }
+
+    .blog-excerpt {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .blog-link {
+        color: #2966ff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .blog-link::after {
+        content: '→';
+        transition: transform 0.2s ease;
+    }
+
+    .blog-link:hover::after {
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .blog-grid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="blog-container-wrapper">
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <h1>Blog y Recursos</h1>
+        <p>Estrategias, consejos y noticias para potenciar tu captación de leads.</p>
+    </section>
+
+    <!-- BLOG GRID -->
+    <main class="blog-grid-container">
+
+        <!-- Article 1 -->
+        <article class="blog-card">
+            <div class="blog-thumb" style="background: linear-gradient(135deg, #1e2542 0%, #0f132a 100%);">
+                <span style="font-size: 3rem;">🧩</span>
+            </div>
+            <div class="blog-content">
+
+                <span class="blog-tag">Estrategia</span>
+                <h2 class="blog-title">Por qué el Drag & Drop no garantiza ventas: La realidad del diseño web</h2>
+                <p class="blog-excerpt">Tener una herramienta fácil de usar no significa que el resultado vaya a
+                    convertir. Descubre por qué la estrategia supera a la herramienta.</p>
+                <!-- NOTE: Update this link to your actual WordPress post URL -->
+                <a href="https://blog.capturaleads.com/por-que-el-drag-drop-no-garantiza-ventas/" class="blog-link">Leer
+                    Artículo</a>
+            </div>
+        </article>
+
+        <!-- Placeholder for future posts -->
+        <!-- <article class="blog-card">...</article> -->
+
+    </main>
+</div>
